@@ -1,0 +1,58 @@
+# ── Python / Django ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+static_collected/
+
+# Secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Migrations (keep these — they ARE committed)
+# If you want to ignore migrations, uncomment below:
+# */migrations/0*.py
+
+# ── Node / React ──────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.cache/
+*.local
+
+# Vite
+dist-ssr/
+
+# ── OS files ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ── Misc ──────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+coverage/
+.pytest_cache/
+.mypy_cache/
