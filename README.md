@@ -2,11 +2,16 @@
 
 > Assignment submission for Spreetail Software Engineering Intern
 
+## Live Deployment
+
+**Backend API:** https://freetail.onrender.com/
+
 ## Quick Start
 
 ### Option A: Manual (recommended for development)
 
 **Backend:**
+
 ```bash
 cd backend
 python -m venv venv
@@ -19,6 +24,7 @@ python manage.py runserver
 ```
 
 **Frontend:**
+
 ```bash
 cd frontend
 npm install
@@ -27,6 +33,7 @@ npm run dev
 ```
 
 ### Option B: Docker
+
 ```bash
 docker-compose up --build
 ```
@@ -34,7 +41,16 @@ docker-compose up --build
 ## Demo Login
 
 Username: `aisha` | Password: `password123`
-(All users use the same password: `aisha`, `rohan`, `priya`, `meera`, `sam`)
+
+(All users use the same password: `password123`)
+
+Available users:
+
+* `aisha`
+* `rohan`
+* `priya`
+* `meera`
+* `sam`
 
 ## Importing the CSV
 
@@ -48,22 +64,44 @@ Username: `aisha` | Password: `password123`
 
 ## Docs
 
-| File | Contents |
-|------|---------|
-| `docs/SCOPE.md` | All 19 CSV anomalies + database schema |
-| `docs/DECISIONS.md` | Engineering decision log |
-| `docs/AI_USAGE.md` | AI tools, prompts, corrections |
-| `docs/IMPORT_POLICIES.md` | Per-anomaly import policies |
+| File                      | Contents                               |
+| ------------------------- | -------------------------------------- |
+| `docs/SCOPE.md`           | All 19 CSV anomalies + database schema |
+| `docs/DECISIONS.md`       | Engineering decision log               |
+| `docs/AI_USAGE.md`        | AI tools, prompts, corrections         |
+| `docs/IMPORT_POLICIES.md` | Per-anomaly import policies            |
 
 ## Features
 
-- ✅ JWT auth (login / register)
-- ✅ Groups with time-bounded membership (join/leave dates)
-- ✅ Expenses: equal, unequal, percentage, share splits
-- ✅ Multi-currency (USD → INR conversion at configurable rate)
-- ✅ Balance summary with minimum-payment settlement plan
-- ✅ Per-expense breakdown (Rohan's requirement)
-- ✅ Settlement recording
-- ✅ CSV import with anomaly detection + user approval flow
-- ✅ Import report (JSON + downloadable text)
-- ✅ Soft delete + audit log
+* ✅ JWT authentication (login / register)
+* ✅ Groups with time-bounded membership (join/leave dates)
+* ✅ Expenses with equal, unequal, percentage, and share splits
+* ✅ Multi-currency support (USD → INR conversion at configurable rate)
+* ✅ Balance summary with minimum-payment settlement plan
+* ✅ Per-expense breakdown (Rohan's requirement)
+* ✅ Settlement recording
+* ✅ CSV import with anomaly detection and user approval workflow
+* ✅ Import report generation (JSON + downloadable text)
+* ✅ Soft delete support
+* ✅ Audit logging
+
+## Tech Stack
+
+### Backend
+
+* Django
+* Django REST Framework
+* JWT Authentication
+* SQLite / PostgreSQL compatible
+
+### Frontend
+
+* React
+* Vite
+* Axios
+* React Router
+
+### Deployment
+
+* Backend: https://freetail.onrender.com/
+* Database: Neon PostgreSQL
